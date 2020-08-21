@@ -25,7 +25,7 @@ public class Conexion {
         try {
             String url = "jdbc:postgresql://localhost:5432/Ventas";//Ubicación de la base de datos
 
-            con = DriverManager.getConnection(url, "postgres", "1234");//Usuario y contraseña de Postgress
+            con = DriverManager.getConnection(url, "postgres", "1234");//Usuario y contraseña de Postgres
 
             checkForWarning(con.getWarnings());
 
