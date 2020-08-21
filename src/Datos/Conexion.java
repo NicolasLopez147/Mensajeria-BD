@@ -17,15 +17,15 @@ public class Conexion {
 
     public Conexion(String nombre) {
         try {
-            Class.forName("org.postgresql.Driver");  //loads the driver
+            Class.forName("org.postgresql.Driver"); 
         } catch (ClassNotFoundException e) {
             System.out.println("No encontro driver");
         }
 
         try {
-            String url = "jdbc:postgresql://localhost:5432/Ventas";
+            String url = "jdbc:postgresql://localhost:5432/Ventas";//Ubicación de la base de datos
 
-            con = DriverManager.getConnection(url, "postgres", "1234");
+            con = DriverManager.getConnection(url, "postgres", "1234");//Usuario y contraseña de Postgress
 
             checkForWarning(con.getWarnings());
 
