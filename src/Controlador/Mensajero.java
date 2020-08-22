@@ -9,8 +9,7 @@ package Controlador;
  *
  * @author Juan
  */
-public class Mensjaero {
-    String tipoDeDocumento;
-    int numeroDeDocumento;
+public class Mensajero {
+    
     
 }
