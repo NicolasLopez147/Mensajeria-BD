@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Datos;
+package Modelo;
 
 import java.sql.*;
 
@@ -13,9 +13,9 @@ import java.sql.*;
  */
 public class Conexion {
 
-    public Connection con;
+    public static Connection con;//Instancia de la conexión
 
-    public Conexion(String nombre) {
+    public Conexion() {//Constructor
         try {
             Class.forName("org.postgresql.Driver"); 
         } catch (ClassNotFoundException e) {
@@ -23,8 +23,8 @@ public class Conexion {
         }
 
         try {
-            String url = "jdbc:postgresql://localhost:5432/Ventas";//Ubicación de la base de datos
-
+            String url = "jdbc:postgresql://localhost:5432/Mensajeria";//Ubicación de la base de datos
+           
             con = DriverManager.getConnection(url, "postgres", "1234");//Usuario y contraseña de Postgres
 
             checkForWarning(con.getWarnings());
@@ -72,6 +72,8 @@ public class Conexion {
         }
         return rc;
     }
+
+    
 
     public void cerrarConexion() {
         try {

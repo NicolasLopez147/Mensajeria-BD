@@ -4,19 +4,13 @@
  * and open the template in the editor.
  */
 package Modelo;
-
-import java.sql.SQLException;
-
+import java.sql.*;
 /**
  *
  * @author Juan
  */
-public class main {
-    public static void main(String[] args) throws SQLException{
-       Conexion a = new Conexion();
+public class DAOMensajero {
+    void InsertarMensjaero(){
         
-       DAOCliente b = new DAOCliente();
-       b.InsertarCliente();
-       
     }
 }
