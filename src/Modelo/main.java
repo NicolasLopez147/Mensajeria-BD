@@ -13,10 +13,10 @@ import java.sql.SQLException;
  */
 public class main {
     public static void main(String[] args) throws SQLException{
-       Conexion a = new Conexion();
+       Conexion a = new Conexion();//Toca instanciar la conexion o efe :v
         
-       DAOCliente b = new DAOCliente();
-       b.InsertarCliente();
+       DAOCliente b = new DAOCliente();//Esto es prueba xd
+       b.InsertarCliente();//Esto es de prueba :v
        
     }
 }

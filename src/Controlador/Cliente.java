@@ -21,6 +21,7 @@ public class Cliente {
     String ciudad;
     String barrio;
 
+    /*Constructor del cliente*/
     public Cliente(String tipoDeDocumento, int numeroDeDocumento, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String calle, int numeroDeCalle, String ciudad, String barrio) {
         this.tipoDeDocumento = tipoDeDocumento;
         this.numeroDeDocumento = numeroDeDocumento;
