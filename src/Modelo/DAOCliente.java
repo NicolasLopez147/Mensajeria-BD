@@ -18,6 +18,7 @@ public class DAOCliente {
 
     public void InsertarCliente() throws SQLException {
         Cliente usuario = new Cliente("C.C", 0, "Juan", "Diego", "León", "Moreno", "Uno", 12, "Bogota", "Villas");//Instancia de nuevo cliente
+        //toca recibir los valores de instancia desde los forms
         String sql = "INSERT into cliente VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna

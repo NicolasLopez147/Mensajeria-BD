@@ -10,6 +10,7 @@ package Controlador;
  * @author Juan
  */
 public class Cliente {
+    //Las variables deberían ser privadas?, pues tienen setters y getters
     String tipoDeDocumento;
     int numeroDeDocumento;
     String primerNombre;
