@@ -17,6 +17,8 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     public Registro_Mensajero() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.Aviso_registro_msj.setLocationRelativeTo(null);
+        this.Aviso_registro_msj.setSize(450, 155);
     }
 
     /**
@@ -28,46 +30,110 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        Aviso_registro_msj = new javax.swing.JDialog();
+        jLabel14 = new javax.swing.JLabel();
+        Conti_aviso_msj = new javax.swing.JButton();
+        Panel_mensajero = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        Pri_ape_msj = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        Seg_ape_msj = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        Tipo_doc_msj = new javax.swing.JComboBox<>();
+        Pri_nom_msj = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        Seg_nom_msj = new javax.swing.JTextField();
+        Num_doc_msj = new javax.swing.JTextField();
+        Conti_panel1_msj = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        Fecha_nac_msj = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        Nac_msj = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        Ciudad_res_msj = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jButton2 = new javax.swing.JButton();
+        Segu_soc_msj = new javax.swing.JComboBox<>();
+        Conti_panel2_msj = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        Conti_panel3_msj = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        Lunes_check = new javax.swing.JCheckBox();
+        Martes_check = new javax.swing.JCheckBox();
+        Miercoles_check = new javax.swing.JCheckBox();
+        Jueves_check = new javax.swing.JCheckBox();
+        Viernes_check = new javax.swing.JCheckBox();
+        Sabado_check = new javax.swing.JCheckBox();
+        Domingo_check = new javax.swing.JCheckBox();
+        jLabel18 = new javax.swing.JLabel();
+        Hora_ini_lunes = new javax.swing.JTextField();
+        Hora_fin_lunes = new javax.swing.JTextField();
+        Hora_ini_martes = new javax.swing.JTextField();
+        Hora_fin_martes = new javax.swing.JTextField();
+        Hora_ini_miercoles = new javax.swing.JTextField();
+        Hora_ini_jueves = new javax.swing.JTextField();
+        Hora_ini_viernes = new javax.swing.JTextField();
+        Hora_ini_sabado = new javax.swing.JTextField();
+        Hora_ini_domingo = new javax.swing.JTextField();
+        Hora_fin_miercoles = new javax.swing.JTextField();
+        Hora_fin_jueves = new javax.swing.JTextField();
+        Hora_fin_viernes = new javax.swing.JTextField();
+        Hora_fin_sabado = new javax.swing.JTextField();
+        Hora_fin_domingo = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jButton4 = new javax.swing.JButton();
+        Placa_veh_msj = new javax.swing.JTextField();
+        Doc_check = new javax.swing.JCheckBox();
+        Paq_peque_check = new javax.swing.JCheckBox();
+        Paq_med_check = new javax.swing.JCheckBox();
+        Paq_gra_check = new javax.swing.JCheckBox();
+        Tipo_veh_msj = new javax.swing.JComboBox<>();
+        Regis_msj = new javax.swing.JButton();
+
+        Aviso_registro_msj.setTitle("En desarrollo");
+
+        jLabel14.setText("Registro exitoso, habilitada opción de atender servicio");
+
+        Conti_aviso_msj.setText("Continuar");
+        Conti_aviso_msj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Conti_aviso_msjActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Aviso_registro_msjLayout = new javax.swing.GroupLayout(Aviso_registro_msj.getContentPane());
+        Aviso_registro_msj.getContentPane().setLayout(Aviso_registro_msjLayout);
+        Aviso_registro_msjLayout.setHorizontalGroup(
+            Aviso_registro_msjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Aviso_registro_msjLayout.createSequentialGroup()
+                .addGroup(Aviso_registro_msjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Aviso_registro_msjLayout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel14))
+                    .addGroup(Aviso_registro_msjLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(Conti_aviso_msj)))
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+        Aviso_registro_msjLayout.setVerticalGroup(
+            Aviso_registro_msjLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Aviso_registro_msjLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel14)
+                .addGap(18, 18, 18)
+                .addComponent(Conti_aviso_msj)
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("En desarrollo");
 
         jLabel3.setText("Primer apellido:");
 
@@ -77,15 +143,20 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
         jLabel1.setText("Primer nombre:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de ciudadanía", "Cédula de extranjería" }));
+        Tipo_doc_msj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de ciudadanía", "Cédula de extranjería" }));
 
-        jTextField1.setText("Pepito");
+        Pri_nom_msj.setText("Pepito");
 
         jLabel6.setText("Número documento:");
 
         jLabel2.setText("Segundo nombre:");
 
-        jButton1.setText("Guardar");
+        Conti_panel1_msj.setText("Continuar");
+        Conti_panel1_msj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Conti_panel1_msjActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,35 +166,35 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1))
+                        .addComponent(Conti_panel1_msj))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField5))
+                                .addComponent(Num_doc_msj))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel3)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(Pri_ape_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel1)
                                         .addComponent(jLabel2))
                                     .addGap(32, 32, 32)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(Pri_nom_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Seg_nom_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel4)
                                         .addComponent(jLabel5))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(Seg_ape_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(Tipo_doc_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                 .addGap(59, 59, 59))
         );
         jPanel1Layout.setVerticalGroup(
@@ -132,33 +203,33 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Pri_nom_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Seg_nom_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Pri_ape_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Seg_ape_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tipo_doc_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                    .addComponent(Num_doc_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addComponent(Conti_panel1_msj)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Básicos", jPanel1);
+        Panel_mensajero.addTab("Básicos", jPanel1);
 
         jLabel7.setText("Fecha de nacimiento:");
 
@@ -168,9 +239,14 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
         jLabel10.setText("Seguridad social:");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
+        Segu_soc_msj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sí", "No" }));
 
-        jButton2.setText("Guardar");
+        Conti_panel2_msj.setText("Continuar");
+        Conti_panel2_msj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Conti_panel2_msjActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -185,20 +261,20 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                             .addComponent(jLabel8))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField6)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Fecha_nac_msj)
+                            .addComponent(Nac_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
                             .addComponent(jLabel10))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8))))
+                            .addComponent(Segu_soc_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Ciudad_res_msj))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(265, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addContainerGap(257, Short.MAX_VALUE)
+                .addComponent(Conti_panel2_msj)
                 .addGap(59, 59, 59))
         );
         jPanel2Layout.setVerticalGroup(
@@ -207,46 +283,167 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Fecha_nac_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Nac_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Ciudad_res_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                    .addComponent(Segu_soc_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addComponent(Conti_panel2_msj)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Básicos 2", jPanel2);
+        Panel_mensajero.addTab("Básicos 2", jPanel2);
 
-        jButton3.setText("Guardar");
+        Conti_panel3_msj.setText("Continuar");
+        Conti_panel3_msj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Conti_panel3_msjActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("Día");
+
+        jLabel16.setText("Hora inicio");
+
+        jLabel17.setText("Hora final");
+
+        Lunes_check.setText("Lunes");
+
+        Martes_check.setText("Martes");
+
+        Miercoles_check.setText("Miércoles");
+
+        Jueves_check.setText("Jueves");
+
+        Viernes_check.setText("Viernes");
+
+        Sabado_check.setText("Sábado");
+
+        Domingo_check.setText("Domingo");
+
+        jLabel18.setText("Recuerde que el formato de la hora es el de 24h.");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jLabel15)
+                                .addGap(33, 33, 33))
+                            .addComponent(Domingo_check)
+                            .addComponent(Lunes_check)
+                            .addComponent(Martes_check)
+                            .addComponent(Miercoles_check)
+                            .addComponent(Jueves_check)
+                            .addComponent(Viernes_check)
+                            .addComponent(Sabado_check))
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Hora_ini_viernes)
+                            .addComponent(Hora_ini_sabado)
+                            .addComponent(Hora_ini_domingo)
+                            .addComponent(Hora_ini_lunes)
+                            .addComponent(Hora_ini_miercoles)
+                            .addComponent(Hora_ini_jueves)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel16)
+                                .addGap(0, 11, Short.MAX_VALUE))
+                            .addComponent(Hora_ini_martes))
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel17)
+                            .addComponent(Hora_fin_lunes, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                            .addComponent(Hora_fin_martes)
+                            .addComponent(Hora_fin_miercoles)
+                            .addComponent(Hora_fin_jueves)
+                            .addComponent(Hora_fin_viernes)
+                            .addComponent(Hora_fin_sabado)
+                            .addComponent(Hora_fin_domingo))
+                        .addGap(53, 53, 53))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(265, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Conti_panel3_msj)
                 .addGap(59, 59, 59))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(238, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addContainerGap()
+                .addComponent(jLabel18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Hora_fin_lunes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(Hora_fin_martes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(Hora_fin_miercoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Hora_fin_jueves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(Hora_fin_viernes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)
+                        .addComponent(Hora_fin_sabado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Lunes_check)
+                            .addComponent(Hora_ini_lunes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Martes_check)
+                            .addComponent(Hora_ini_martes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Miercoles_check)
+                            .addComponent(Hora_ini_miercoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Jueves_check)
+                            .addComponent(Hora_ini_jueves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Viernes_check)
+                            .addComponent(Hora_ini_viernes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Sabado_check)
+                            .addComponent(Hora_ini_sabado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Domingo_check)
+                            .addComponent(Hora_ini_domingo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Hora_fin_domingo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(7, 7, 7)
+                .addComponent(Conti_panel3_msj)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Horario", jPanel4);
+        Panel_mensajero.addTab("Horario", jPanel4);
 
         jLabel11.setText("Tipo:");
 
@@ -254,17 +451,22 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
         jLabel13.setText("Transporte:");
 
-        jCheckBox1.setText("Documento");
+        Doc_check.setText("Documento");
 
-        jCheckBox2.setText("Paquete pequeño");
+        Paq_peque_check.setText("Paquete pequeño");
 
-        jCheckBox3.setText("Paquete mediano");
+        Paq_med_check.setText("Paquete mediano");
 
-        jCheckBox4.setText("Paquete grande");
+        Paq_gra_check.setText("Paquete grande");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Moto", "Bicicleta" }));
+        Tipo_veh_msj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Moto", "Bicicleta" }));
 
-        jButton4.setText("Continuar");
+        Regis_msj.setText("Registrar");
+        Regis_msj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Regis_msjActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -282,16 +484,16 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                         .addComponent(jLabel13)
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Paq_gra_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Paq_med_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Doc_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Paq_peque_check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Tipo_veh_msj, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Placa_veh_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(170, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(Regis_msj)
                 .addGap(59, 59, 59))
         );
         jPanel3Layout.setVerticalGroup(
@@ -300,94 +502,201 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Tipo_veh_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Placa_veh_msj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jCheckBox1)
+                .addComponent(Doc_check)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel13)
-                    .addComponent(jCheckBox2))
+                    .addComponent(Paq_peque_check))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox3)
+                .addComponent(Paq_med_check)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(jButton4)
+                .addComponent(Paq_gra_check)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(Regis_msj)
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Vehiculo", jPanel3);
+        Panel_mensajero.addTab("Vehiculo", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(Panel_mensajero)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(Panel_mensajero)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Conti_panel1_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel1_msjActionPerformed
+        
+        Panel_mensajero.setSelectedIndex(1);
+        
+    }//GEN-LAST:event_Conti_panel1_msjActionPerformed
+
+    private void Conti_panel2_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel2_msjActionPerformed
+       
+        Panel_mensajero.setSelectedIndex(2);
+        
+    }//GEN-LAST:event_Conti_panel2_msjActionPerformed
+
+    private void Conti_panel3_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel3_msjActionPerformed
+       
+        Panel_mensajero.setSelectedIndex(3);
+        
+    }//GEN-LAST:event_Conti_panel3_msjActionPerformed
+
+    private void Regis_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regis_msjActionPerformed
+        
+         Aviso_registro_msj.setVisible(true);
+
+        //Poner en blanco todos los JTextField y los JCheckBox
+        Pri_nom_msj.setText("");
+        Seg_nom_msj.setText("");
+        Pri_ape_msj.setText("");
+        Seg_ape_msj.setText("");
+        Num_doc_msj.setText("");
+        Fecha_nac_msj.setText("");
+        Nac_msj.setText("");
+        Ciudad_res_msj.setText("");
+        Lunes_check.setSelected(false);
+        Martes_check.setSelected(false);
+        Miercoles_check.setSelected(false);
+        Jueves_check.setSelected(false);
+        Viernes_check.setSelected(false);
+        Sabado_check.setSelected(false);
+        Domingo_check.setSelected(false);
+        Hora_ini_lunes.setText("");
+        Hora_fin_lunes.setText("");
+        Hora_ini_martes.setText("");
+        Hora_fin_martes.setText("");
+        Hora_ini_miercoles.setText("");
+        Hora_fin_miercoles.setText("");
+        Hora_ini_jueves.setText("");
+        Hora_fin_jueves.setText("");
+        Hora_ini_viernes.setText("");
+        Hora_fin_viernes.setText("");
+        Hora_ini_sabado.setText("");
+        Hora_fin_sabado.setText("");
+        Hora_ini_domingo.setText("");
+        Hora_fin_domingo.setText("");
+        Placa_veh_msj.setText("");
+        Doc_check.setSelected(false);
+        Paq_peque_check.setSelected(false);
+        Paq_med_check.setSelected(false);
+        Paq_gra_check.setSelected(false);
+        
+        
+    }//GEN-LAST:event_Regis_msjActionPerformed
+
+    private void Conti_aviso_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_aviso_msjActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Aviso_registro_msj.setVisible(false);
+        new Inicio().setVisible(true);
+        
+    }//GEN-LAST:event_Conti_aviso_msjActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Registro_Mensajero().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Registro_Mensajero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Registro_Mensajero().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JDialog Aviso_registro_msj;
+    private javax.swing.JTextField Ciudad_res_msj;
+    private javax.swing.JButton Conti_aviso_msj;
+    private javax.swing.JButton Conti_panel1_msj;
+    private javax.swing.JButton Conti_panel2_msj;
+    private javax.swing.JButton Conti_panel3_msj;
+    private javax.swing.JCheckBox Doc_check;
+    private javax.swing.JCheckBox Domingo_check;
+    private javax.swing.JTextField Fecha_nac_msj;
+    private javax.swing.JTextField Hora_fin_domingo;
+    private javax.swing.JTextField Hora_fin_jueves;
+    private javax.swing.JTextField Hora_fin_lunes;
+    private javax.swing.JTextField Hora_fin_martes;
+    private javax.swing.JTextField Hora_fin_miercoles;
+    private javax.swing.JTextField Hora_fin_sabado;
+    private javax.swing.JTextField Hora_fin_viernes;
+    private javax.swing.JTextField Hora_ini_domingo;
+    private javax.swing.JTextField Hora_ini_jueves;
+    private javax.swing.JTextField Hora_ini_lunes;
+    private javax.swing.JTextField Hora_ini_martes;
+    private javax.swing.JTextField Hora_ini_miercoles;
+    private javax.swing.JTextField Hora_ini_sabado;
+    private javax.swing.JTextField Hora_ini_viernes;
+    private javax.swing.JCheckBox Jueves_check;
+    private javax.swing.JCheckBox Lunes_check;
+    private javax.swing.JCheckBox Martes_check;
+    private javax.swing.JCheckBox Miercoles_check;
+    private javax.swing.JTextField Nac_msj;
+    private javax.swing.JTextField Num_doc_msj;
+    private javax.swing.JTabbedPane Panel_mensajero;
+    private javax.swing.JCheckBox Paq_gra_check;
+    private javax.swing.JCheckBox Paq_med_check;
+    private javax.swing.JCheckBox Paq_peque_check;
+    private javax.swing.JTextField Placa_veh_msj;
+    private javax.swing.JTextField Pri_ape_msj;
+    private javax.swing.JTextField Pri_nom_msj;
+    private javax.swing.JButton Regis_msj;
+    private javax.swing.JCheckBox Sabado_check;
+    private javax.swing.JTextField Seg_ape_msj;
+    private javax.swing.JTextField Seg_nom_msj;
+    private javax.swing.JComboBox<String> Segu_soc_msj;
+    private javax.swing.JComboBox<String> Tipo_doc_msj;
+    private javax.swing.JComboBox<String> Tipo_veh_msj;
+    private javax.swing.JCheckBox Viernes_check;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -400,15 +709,5 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     // End of variables declaration//GEN-END:variables
 }
