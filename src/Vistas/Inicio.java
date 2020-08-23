@@ -180,6 +180,11 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         Mensajero.setText("Mensajero");
+        Mensajero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MensajeroActionPerformed(evt);
+            }
+        });
 
         Admin.setText("Administrador");
         Admin.addActionListener(new java.awt.event.ActionListener() {
@@ -259,8 +264,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void Mensajero_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mensajero_nuevoActionPerformed
         
-        this.setVisible(false);
-        new Registro_Mensajero().setVisible(true);
+        
         
     }//GEN-LAST:event_Mensajero_nuevoActionPerformed
 
@@ -277,6 +281,12 @@ public class Inicio extends javax.swing.JFrame {
     private void AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminActionPerformed
        
     }//GEN-LAST:event_AdminActionPerformed
+
+    private void MensajeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MensajeroActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new Registro_Mensajero().setVisible(true);
+    }//GEN-LAST:event_MensajeroActionPerformed
 
     /**
      * @param args the command line arguments

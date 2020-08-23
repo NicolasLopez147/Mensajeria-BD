@@ -23,17 +23,7 @@ public class Cliente {
     String barrio;
 
     /*Constructor del cliente*/
-    public Cliente(String tipoDeDocumento, int numeroDeDocumento, String primerNombre, String segundoNombre, String primerApellido, String segundoApellido, String calle, int numeroDeCalle, String ciudad, String barrio) {
-        this.tipoDeDocumento = tipoDeDocumento;
-        this.numeroDeDocumento = numeroDeDocumento;
-        this.primerNombre = primerNombre;
-        this.segundoNombre = segundoNombre;
-        this.primerApellido = primerApellido;
-        this.segundoApellido = segundoApellido;
-        this.calle = calle;
-        this.numeroDeCalle = numeroDeCalle;
-        this.ciudad = ciudad;
-        this.barrio = barrio;
+    public Cliente() {
     }
 
     public String getTipoDeDocumento() {
@@ -116,6 +106,4 @@ public class Cliente {
     public void setBarrio(String barrio) {
         this.barrio = barrio;
     }
-    
-    
 }
