@@ -22,7 +22,7 @@ public class DAOTelefonoCliente {
     }
     public void InsertarTelefonoCliente(){
     
-        String sql = "INSERT into trayecto VALUES (?, ?, ?);";
+        String sql = "INSERT into telefono_cliente VALUES (?, ?, ?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
          */

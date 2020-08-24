@@ -5,7 +5,7 @@
  */
 package Modelo;
 
-import Controlador.*;
+import Controlador.Mensajero;
 import static Modelo.Conexion.con;
 import java.sql.*;
 import javax.swing.JOptionPane;
@@ -32,7 +32,12 @@ public class DAOMensajero {
      //   Mensajero mensajero = new Mensajero();
         
         Conexion a = new Conexion();
-        Date fecha = new Date(00, 0, 0);
+        String sfecha []= mensajero.getFechaDeNacimiento().split("/");
+        int ifecha []= new int [sfecha.length];
+        for (int i = 0 ; i < ifecha.length; i ++){
+            ifecha[i] = Integer.valueOf(sfecha[i]);
+        }
+        Date fecha = new Date(ifecha[0], ifecha[1],ifecha[2]);
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, mensajero.getTipoDeDocumento());

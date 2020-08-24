@@ -7,8 +7,7 @@ package Modelo;
 
 import Controlador.Estado;
 import static Modelo.Conexion.con;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import javax.swing.JOptionPane;
 
 /**

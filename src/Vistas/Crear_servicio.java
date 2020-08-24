@@ -1,5 +1,11 @@
 package Vistas;
 
+
+import Controlador.Ciudad;
+import Controlador.Controlador;
+import Controlador.Estado;
+import Controlador.Servicio;
+import Controlador.Trayecto;
 import javax.swing.JOptionPane;
 
 /**
@@ -7,6 +13,16 @@ import javax.swing.JOptionPane;
  * @author Sebastián
  */
 public class Crear_servicio extends javax.swing.JFrame {
+    
+    private Servicio servicio = new Servicio();
+    private Estado estado = new Estado();
+    private Ciudad ciudad = new Ciudad();
+    private Trayecto trayecto = new Trayecto();
+    private Controlador controlador = new Controlador();
+    
+    private int costoTotal;
+    private int idservicio = 5153;
+    private int cantidadTrayectos=0;
 
     /**
      * Creates new form Crear_servicio
@@ -109,9 +125,10 @@ public class Crear_servicio extends javax.swing.JFrame {
             Confir_servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Confir_servicioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Confir_servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(Confir_servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
-                    .addComponent(Costo_servicio, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Confir_servicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Costo_servicio, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -314,9 +331,23 @@ public class Crear_servicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Crear_servicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Crear_servicioActionPerformed
-        
+        try{
+            String servicios[]= Dir_servicio.getText().split("-");
+            if (jComboBox2.getSelectedItem().toString() == "Sí"){
+                cantidadTrayectos++;
+            }
+            cantidadTrayectos = cantidadTrayectos+servicios.length;
+            ciudad = controlador.getCiudad();
+            ciudad = controlador.BuscarCiudad("12345");
+            System.out.println(ciudad.getCostoTrayecto());
+      //      ciudad = controlador.getCiudad();
+            costoTotal = cantidadTrayectos*ciudad.getCostoTrayecto();
+            Costo_servicio.setText(String.valueOf(costoTotal));
+        }catch(Exception e){
+            System.out.println(e);
+        }
         //Poner el costo del servicio en el JLabel de la otra ventana
-        Costo_servicio.setText("Aqui poner el costo del servicio");
+        
         
         Confir_servicio.setVisible(true);
         
@@ -330,6 +361,39 @@ public class Crear_servicio extends javax.swing.JFrame {
     }//GEN-LAST:event_Volver_menuActionPerformed
 
     private void Sí_crear_servicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sí_crear_servicioActionPerformed
+        controlador = new Controlador();
+        try{
+            servicio = controlador.getServicio();
+            servicio.setIdServicio(idservicio+1);
+            servicio.setCantidadDeTrayectos(idservicio);
+            servicio.setCantidadDeTrayectos(cantidadTrayectos);
+            servicio.setTipoDeTransporte(jComboBox1.getSelectedItem().toString());
+            if (jComboBox2.getSelectedItem().toString() == "Sí"){
+                servicio.setTipoIdaVuelta("SI");
+            }else if(jComboBox2.getSelectedItem().toString() == "No"){
+                servicio.setTipoIdaVuelta("NO");
+            }
+            servicio.setFechaDeInicio(jTextField1.getText());
+            servicio.setHoraDeInicio(jTextField2.getText());
+            servicio.setComision(costoTotal*0.05);
+            servicio.setCostoTotal(costoTotal);
+            String tipo_documento = jComboBox3.getSelectedItem().toString();
+            if (tipo_documento == "Cédula de ciudadanía"){
+                tipo_documento = "C.C";
+            } else if(tipo_documento == "Cédula de extranjería"){
+                tipo_documento = "C.E";
+            } else if(tipo_documento == "Tarjeta de identidad"){
+                tipo_documento = "T.I";
+            }
+            servicio.setTipoDocumentoCliente(tipo_documento);
+            servicio.setNumeroDocumentoCliente(Integer.valueOf(Num_doc.getText()));
+            
+            controlador.InsertarServicio();
+
+        }catch(Exception e){
+            System.out.println(e);
+            System.out.println("No esta insertando el servicio");
+        }
         
         //Poner en blanco el JLabler del costo
         Costo_servicio.setText("");

@@ -60,6 +60,9 @@ public class Controlador {
     public void InsertarCiudad() throws SQLException{
       ciudad.InsertarCiudad();
     }
+    public Ciudad BuscarCiudad(String consulta) throws SQLException{
+      return ciudad.buscarCiudad(consulta);
+    }
     
     public void InsertarEstado() throws SQLException{
       estado.InsertarEstado();

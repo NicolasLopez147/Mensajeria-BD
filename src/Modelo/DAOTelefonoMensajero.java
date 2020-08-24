@@ -7,8 +7,7 @@ package Modelo;
 
 import Controlador.TelefonoMensajero;
 import static Modelo.Conexion.con;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,7 +22,7 @@ public class DAOTelefonoMensajero {
     }
     public void InsertarTelefonoMensajero(){
     
-        String sql = "INSERT into trayecto VALUES (?, ?, ?);";
+        String sql = "INSERT into telefono_mensajero VALUES (?, ?, ?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
          */

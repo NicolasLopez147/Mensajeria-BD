@@ -36,6 +36,28 @@ public class DAOCiudad {
         }
     
     }
+    public Ciudad buscarCiudad(String consulta){
+        String sql = "SELECT * FROM camunicipio WHERE k_codigo_postal = ?";
+        Conexion a = new Conexion();
+        try{
+            PreparedStatement ps = con.prepareStatement(sql);
+            int codigoPostal = Integer.valueOf(consulta);
+            ps.setInt(1, codigoPostal);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                ciudad.setCodigoPostal(rs.getInt("k_codigo_postal"));
+                ciudad.setNombre(rs.getString("n_nombre"));
+                ciudad.setCostoTrayecto(rs.getInt("v_costo_por_trayecto"));
+                }          
+            ps.executeUpdate();
+            ps.close();
+            
+
+      }catch(Exception e){ 
+      }
+        return ciudad;
+        
+    }
 
     public Ciudad getCiudad() {
         return ciudad;

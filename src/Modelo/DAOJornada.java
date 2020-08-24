@@ -7,8 +7,10 @@ package Modelo;
 
 import Controlador.Jornada;
 import static Modelo.Conexion.con;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 
 /**
@@ -28,13 +30,17 @@ public class DAOJornada {
         los valores de cada columna
          */
         Conexion a = new Conexion();
+        Time hora ;
+         String str = "08:03";
+        DateFormat formatter = new SimpleDateFormat("hh:mm");
+        Time.valueOf(str); //date = (Time)formatter.parse(str);
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, jornada.getDia());
             ps.setString(2, jornada.getTipoDocumento());
             ps.setInt(3, jornada.getNumeroDocumento());
-            ps.setString(4, jornada.getHoraInicial());
-            ps.setString(5, jornada.getHoraFinal());
+            ps.setTime(4, Time.valueOf(str));
+            ps.setTime(5, Time.valueOf(str));
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {

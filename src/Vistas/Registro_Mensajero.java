@@ -7,6 +7,9 @@ package Vistas;
 
 import Controlador.Controlador;
 import Controlador.Mensajero;
+import Controlador.TelefonoMensajero;
+import Controlador.CorreoMensajero;
+import Controlador.Jornada;
 
 /**
  *
@@ -16,7 +19,11 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     
     private Controlador controlador = new Controlador();
     private Mensajero mensajero;
+    private TelefonoMensajero telMensajero;
+    private CorreoMensajero correoMensajero;
+    private Jornada jornada;
     
+
     /**
      * Creates new form Registro_Mensajero
      */
@@ -67,8 +74,17 @@ public class Registro_Mensajero extends javax.swing.JFrame {
         Sexo_nsj = new javax.swing.JComboBox<>();
         Atras1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tel_msj = new javax.swing.JTextArea();
+        jLabel20 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Cor_msj = new javax.swing.JTextArea();
         Conti_panel3_msj = new javax.swing.JButton();
+        Atras2 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        Conti_panel4_msj = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -94,14 +110,14 @@ public class Registro_Mensajero extends javax.swing.JFrame {
         Hora_fin_viernes = new javax.swing.JTextField();
         Hora_fin_sabado = new javax.swing.JTextField();
         Hora_fin_domingo = new javax.swing.JTextField();
-        Atras2 = new javax.swing.JButton();
+        Atras3 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         Tipo_veh_msj = new javax.swing.JComboBox<>();
         Regis_msj = new javax.swing.JButton();
         Tipo_trans_msj = new javax.swing.JComboBox<>();
-        Atras3 = new javax.swing.JButton();
+        Atras4 = new javax.swing.JButton();
 
         Aviso_registro_msj.setTitle("En desarrollo");
 
@@ -181,16 +197,16 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Conti_panel1_msj))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(Num_doc_msj))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(Num_doc_msj))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(Pri_ape_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
                                     .addComponent(jLabel2))
@@ -198,7 +214,7 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(Pri_nom_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Seg_nom_msj, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
                                     .addComponent(jLabel5))
@@ -333,10 +349,86 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
         Panel_mensajero.addTab("Básicos 2", jPanel2);
 
+        jLabel19.setText("Télefono(s):");
+
+        Tel_msj.setColumns(20);
+        Tel_msj.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        Tel_msj.setRows(3);
+        jScrollPane1.setViewportView(Tel_msj);
+
+        jLabel20.setText("<html>Correo(s) electronico(s):");
+
+        Cor_msj.setColumns(20);
+        Cor_msj.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        Cor_msj.setRows(4);
+        jScrollPane2.setViewportView(Cor_msj);
+
         Conti_panel3_msj.setText("Continuar");
         Conti_panel3_msj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Conti_panel3_msjActionPerformed(evt);
+            }
+        });
+
+        Atras2.setText("Atras");
+        Atras2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Atras2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel19))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2))
+                        .addContainerGap(73, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(Atras2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Conti_panel3_msj)
+                        .addGap(59, 59, 59))))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel19)))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Conti_panel3_msj)
+                    .addComponent(Atras2))
+                .addGap(35, 35, 35))
+        );
+
+        Panel_mensajero.addTab("Contacto", jPanel5);
+
+        Conti_panel4_msj.setText("Continuar");
+        Conti_panel4_msj.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Conti_panel4_msjActionPerformed(evt);
             }
         });
 
@@ -362,10 +454,10 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
         jLabel18.setText("Recuerde que el formato de la hora es el de 24h, p. ej. 18:15");
 
-        Atras2.setText("Atras");
-        Atras2.addActionListener(new java.awt.event.ActionListener() {
+        Atras3.setText("Atras");
+        Atras3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Atras2ActionPerformed(evt);
+                Atras3ActionPerformed(evt);
             }
         });
 
@@ -377,9 +469,9 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(Atras2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Atras3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Conti_panel3_msj)
+                        .addComponent(Conti_panel4_msj)
                         .addGap(59, 59, 59))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel18)
@@ -478,8 +570,8 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                             .addComponent(Hora_fin_domingo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Conti_panel3_msj)
-                    .addComponent(Atras2))
+                    .addComponent(Conti_panel4_msj)
+                    .addComponent(Atras3))
                 .addContainerGap())
         );
 
@@ -500,10 +592,10 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
         Tipo_trans_msj.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Documento", "Paquete pequeño", "Paquete mediano", "Paquete grande" }));
 
-        Atras3.setText("Atras");
-        Atras3.addActionListener(new java.awt.event.ActionListener() {
+        Atras4.setText("Atras");
+        Atras4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Atras3ActionPerformed(evt);
+                Atras4ActionPerformed(evt);
             }
         });
 
@@ -515,7 +607,7 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(Atras3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Atras4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                         .addComponent(Regis_msj)
                         .addGap(59, 59, 59))
@@ -546,7 +638,7 @@ public class Registro_Mensajero extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Regis_msj)
-                    .addComponent(Atras3))
+                    .addComponent(Atras4))
                 .addGap(35, 35, 35))
         );
 
@@ -578,15 +670,16 @@ public class Registro_Mensajero extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Conti_panel2_msjActionPerformed
 
-    private void Conti_panel3_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel3_msjActionPerformed
+    private void Conti_panel4_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel4_msjActionPerformed
        
-        Panel_mensajero.setSelectedIndex(3);
+        Panel_mensajero.setSelectedIndex(4);
         
-    }//GEN-LAST:event_Conti_panel3_msjActionPerformed
+    }//GEN-LAST:event_Conti_panel4_msjActionPerformed
 
     private void Regis_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regis_msjActionPerformed
         
-        try{
+        
+         try{
             mensajero = controlador.getMensajero();
             mensajero.setPrimNombre(Pri_nom_msj.getText());
             mensajero.setSegNombre(Seg_nom_msj.getText());
@@ -613,21 +706,105 @@ public class Registro_Mensajero extends javax.swing.JFrame {
             }
             mensajero.setSeguridadSocial(segSocial);
             mensajero.setMedioDeTransporte(Tipo_veh_msj.getSelectedItem().toString());
-            
-            mensajero.setCalificacionPromedio(4);
-            mensajero.setSexo("F");
-            mensajero.setPagoAcumulado(1);
-            mensajero.setTipoDeTransporte("9");
+            mensajero.setSexo(Sexo_nsj.getSelectedItem().toString());
+            mensajero.setTipoDeTransporte(Tipo_trans_msj.getSelectedItem().toString());
             mensajero.setEstado("SI");
             
-            controlador.InsertarMensajero();
-             Aviso_registro_msj.setVisible(true);
+        //    controlador.InsertarMensajero();
+            String telefonos []= Tel_msj.getText().split("-");
+            String correos[] = Cor_msj.getText().split("-");
+            for (int i = 0 ; i < telefonos.length ; i ++){
+                telMensajero = controlador.getTelefonoMensajero();
+                telMensajero.setTelefonoMensajero(Integer.valueOf(telefonos[i]));
+                telMensajero.setTipoDocumento(mensajero.getTipoDeDocumento());
+                telMensajero.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+         //       controlador.InsertarTelefonoMensajero();
+            }
+            for (int i = 0 ; i < correos.length ; i ++){
+                correoMensajero = controlador.getCorreoMensajero();
+                correoMensajero.setCorreoMenjajero(correos[i]);
+                correoMensajero.setTipoDocumento(mensajero.getTipoDeDocumento());
+                correoMensajero.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+         //       controlador.InsertarCorreoMensajero();
+            }
+            
+            
+            if (Lunes_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Lunes");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_lunes.getText());
+                jornada.setHoraInicial(Hora_fin_lunes.getText());
+                
+                controlador.InsertarJornada();
+            }
+            if (Martes_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Martes");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_martes.getText());
+                jornada.setHoraInicial(Hora_fin_martes.getText());
+                
+                controlador.InsertarJornada();
+            }
+            if (Miercoles_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Miercoles");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_miercoles.getText());
+                jornada.setHoraInicial(Hora_fin_miercoles.getText());
+                
+                controlador.InsertarJornada();
+            }
+            if (Jueves_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Jueves");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_jueves.getText());
+                jornada.setHoraInicial(Hora_fin_jueves.getText());
+                
+                controlador.InsertarJornada();
+            }
+            if (Viernes_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Viernes");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_viernes.getText());
+                jornada.setHoraInicial(Hora_fin_viernes.getText());
+                
+                controlador.InsertarJornada();
+            }
+            if (Sabado_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Sabado");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_sabado.getText());
+                jornada.setHoraInicial(Hora_fin_sabado.getText());
+                
+                controlador.InsertarJornada();
+            }
+            if (Domingo_check.isSelected()){
+                jornada = controlador.getJornada();
+                jornada.setDia("Domingo");
+                jornada.setTipoDocumento(mensajero.getTipoDeDocumento());
+                jornada.setNumeroDocumento(mensajero.getNumeroDeDocumento());
+                jornada.setHoraInicial(Hora_ini_domingo.getText());
+                jornada.setHoraInicial(Hora_fin_domingo.getText());
+                
+                controlador.InsertarJornada();
+            }
+            Aviso_registro_msj.setVisible(true);
             
             
         }catch(Exception e){
             System.out.println(e);
         }
-        
 
         //Poner en blanco todos los JTextField y los JCheckBox
         Pri_nom_msj.setText("");
@@ -682,17 +859,29 @@ public class Registro_Mensajero extends javax.swing.JFrame {
         
     }//GEN-LAST:event_Atras1ActionPerformed
 
-    private void Atras2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Atras2ActionPerformed
-        
-        Panel_mensajero.setSelectedIndex(1);
-        
-    }//GEN-LAST:event_Atras2ActionPerformed
-
     private void Atras3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Atras3ActionPerformed
         
         Panel_mensajero.setSelectedIndex(2);
         
     }//GEN-LAST:event_Atras3ActionPerformed
+
+    private void Atras4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Atras4ActionPerformed
+        
+        Panel_mensajero.setSelectedIndex(3);
+        
+    }//GEN-LAST:event_Atras4ActionPerformed
+
+    private void Conti_panel3_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel3_msjActionPerformed
+        
+        Panel_mensajero.setSelectedIndex(3);
+        
+    }//GEN-LAST:event_Conti_panel3_msjActionPerformed
+
+    private void Atras2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Atras2ActionPerformed
+        
+        Panel_mensajero.setSelectedIndex(1);
+        
+    }//GEN-LAST:event_Atras2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -733,11 +922,14 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     private javax.swing.JButton Atras1;
     private javax.swing.JButton Atras2;
     private javax.swing.JButton Atras3;
+    private javax.swing.JButton Atras4;
     private javax.swing.JDialog Aviso_registro_msj;
     private javax.swing.JButton Conti_aviso_msj;
     private javax.swing.JButton Conti_panel1_msj;
     private javax.swing.JButton Conti_panel2_msj;
     private javax.swing.JButton Conti_panel3_msj;
+    private javax.swing.JButton Conti_panel4_msj;
+    private javax.swing.JTextArea Cor_msj;
     private javax.swing.JCheckBox Domingo_check;
     private javax.swing.JTextField Fecha_nac_msj;
     private javax.swing.JTextField Hora_fin_domingo;
@@ -770,6 +962,7 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     private javax.swing.JTextField Seg_nom_msj;
     private javax.swing.JComboBox<String> Segu_soc_msj;
     private javax.swing.JComboBox<String> Sexo_nsj;
+    private javax.swing.JTextArea Tel_msj;
     private javax.swing.JComboBox<String> Tipo_doc_msj;
     private javax.swing.JComboBox<String> Tipo_trans_msj;
     private javax.swing.JComboBox<String> Tipo_veh_msj;
@@ -784,7 +977,9 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -796,5 +991,8 @@ public class Registro_Mensajero extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 }
