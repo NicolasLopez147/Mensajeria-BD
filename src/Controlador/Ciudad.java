@@ -7,17 +7,14 @@ package Controlador;
 
 /**
  *
- * @author Juan
+ * @author Antonio
  */
 public class Ciudad {
-    int codigoPostal;
-    String nombre;
-    double CostoPorTrayecto;
-
-    public Ciudad(int codigoPostal, String nombre, double CostoPorTrayecto) {
-        this.codigoPostal = codigoPostal;
-        this.nombre = nombre;
-        this.CostoPorTrayecto = CostoPorTrayecto;
+    private int codigoPostal;
+    private String nombre;
+    private int costoTrayecto;
+    
+    public Ciudad(){
     }
 
     public int getCodigoPostal() {
@@ -36,12 +33,12 @@ public class Ciudad {
         this.nombre = nombre;
     }
 
-    public double getCostoPorTrayecto() {
-        return CostoPorTrayecto;
+    public int getCostoTrayecto() {
+        return costoTrayecto;
     }
 
-    public void setCostoPorTrayecto(double CostoPorTrayecto) {
-        this.CostoPorTrayecto = CostoPorTrayecto;
+    public void setCostoTrayecto(int costoTrayecto) {
+        this.costoTrayecto = costoTrayecto;
     }
     
 }

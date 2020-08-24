@@ -15,6 +15,11 @@ import Controlador.Servicio;
  * @author Juan
  */
 public class DAOServicio {
+    private Servicio servicio;
+    public DAOServicio(){
+        servicio = new Servicio();
+    }
+    
     public void InsertarServicio(){
         Servicio servicio = new Servicio();
         String sql = "INSERT into servicio VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
@@ -39,4 +44,14 @@ public class DAOServicio {
             System.out.println("ok");
         }
     }
+
+    public Servicio getServicio() {
+        return servicio;
+    }
+
+    public void setServicio(Servicio servicio) {
+        this.servicio = servicio;
+    }
+    
+    
 }

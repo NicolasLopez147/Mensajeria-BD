@@ -15,20 +15,27 @@ import javax.swing.JOptionPane;
  * @author Juan
  */
 public class DAOTrayecto {
+    private Trayecto trayecto;
       
+    public DAOTrayecto(){
+        trayecto = new Trayecto();
+    }
     public void InsertarTrayecto(){
-    Trayecto trayecto = new Trayecto(0, 2, "M", "Veneco", 25, "MIAU");//Instancia de nuevo trayecto
+    
         String sql = "INSERT into trayecto VALUES (?, ?, ?, ?, ?, ?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
          */
+        
+         Conexion a = new Conexion();
+         
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, trayecto.getIdentificadorDeServicio());
-            ps.setInt(2, trayecto.getIdentificadorDeRuta());
+            ps.setInt(1, trayecto.getIdServicio());
+            ps.setInt(2, trayecto.getIdRuta());
             ps.setString(3, trayecto.getDescripcion());
             ps.setString(4, trayecto.getCalle());
-            ps.setInt(5, trayecto.getNumeroDeCalle());
+            ps.setInt(5, trayecto.getNumero());
             ps.setString(6, trayecto.getBarrio());
             ps.executeUpdate();
             ps.close();
@@ -37,5 +44,12 @@ public class DAOTrayecto {
         } finally {
             System.out.println("ok");
         }
-}
+    }
+    public Trayecto getTrayecto() {
+        return trayecto;
+    }
+
+    public void setTrayecto(Trayecto trayecto) {
+        this.trayecto = trayecto;
+    }  
 }

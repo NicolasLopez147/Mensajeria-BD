@@ -1,5 +1,8 @@
 package Vistas;
 
+import Controlador.Cliente;
+import Controlador.Controlador;
+import Controlador.TelefonoCliente;
 import javax.swing.JOptionPane;
 
 /**
@@ -7,7 +10,9 @@ import javax.swing.JOptionPane;
  * @author Sebastián
  */
 public class Registro_Cliente extends javax.swing.JFrame {
-
+    private Cliente cliente;
+    private TelefonoCliente telcliente = new TelefonoCliente();
+    private Controlador controlador = new Controlador();
 
     public Registro_Cliente() {
         initComponents();
@@ -340,9 +345,50 @@ public class Registro_Cliente extends javax.swing.JFrame {
 
     private void Regis_cliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regis_cliActionPerformed
         
+        try{
+            cliente = controlador.getCliente();
+            cliente.setPrimerNombre(Pri_nom_cli.getText());
+            cliente.setSegundoNombre(Seg_nom_cli.getText());
+            cliente.setPrimerApellido(Pri_ape_cli.getText());
+            cliente.setSegundoApellido(Seg_ape_cli.getText());
+            String tipo_documento = Tipo_doc_cli.getSelectedItem().toString();
+            if (tipo_documento == "Cédula de ciudadanía"){
+                tipo_documento = "C.C";
+            } else if(tipo_documento == "Cédula de extranjería"){
+                tipo_documento = "C.E";
+            } else if(tipo_documento == "Tarjeta de identidad"){
+                tipo_documento = "T.I";
+            }
+            cliente.setTipoDeDocumento(tipo_documento);
+            cliente.setNumeroDeDocumento(Integer.valueOf(Num_doc_cli.getText()));
+            String calle = Tipo_dir_cli.getSelectedItem().toString();
+            calle = calle+" "+Num1_dir_cli.getText();
+            cliente.setCalle(calle);
+            cliente.setNumeroDeCalle(Integer.valueOf(Num2_dir_cli.getText()));
+            cliente.setBarrio(Barrio_cli.getText());
+            cliente.setCiudad(Ciu_cli.getText());
+            String telefonos []= Tel_cli.getText().split("/n");
+            
+            for (int i = 0 ; i < telefonos.length ; i ++){
+                telcliente.setNumeroTelefono(Integer.valueOf(telefonos[i]));
+                telcliente.setTipoDocumento(cliente.getTipoDeDocumento());
+                telcliente.setNumeroDocumento(cliente.getNumeroDeDocumento());
+                try{
+                   controlador.InsertarTelefonoCliente();
+                }catch(Exception f){
+                    System.out.println("NO se esta insertando el numero");
+                }
+                
+            }
+            controlador.InsertarCliente();
+            Aviso_registro_cli.setVisible(true);
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        
         
         //Si el registro es exitoso, poner esto :3
-        Aviso_registro_cli.setVisible(true);
+        
         //Dejar en blanco todos los JTextField
         Pri_nom_cli.setText("");
         Seg_nom_cli.setText("");

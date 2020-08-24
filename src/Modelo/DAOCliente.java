@@ -21,25 +21,12 @@ public class DAOCliente {
     }
 
     public void InsertarCliente() throws SQLException {
-        /*
-        Cliente usuario2 = new Cliente();//Instancia de nuevo cliente
-        usuario2.setTipoDeDocumento("C.C");
-        usuario2.setNumeroDeDocumento(2);
-        usuario2.setPrimerNombre("Juan");
-        usuario2.setSegundoNombre("Diego");
-        usuario2.setPrimerApellido("Leon");
-        usuario2.setSegundoApellido("Moreno");
-        usuario2.setCalle("calle");
-        usuario2.setNumeroDeCalle(23);
-        usuario2.setCiudad("Bogota");
-        usuario2.setBarrio("Villas");
-        */
         //toca recibir los valores de instancia desde los forms
         String sql = "INSERT into cliente VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
          */
-        //Conexion a = new Conexion();
+        Conexion a = new Conexion();
         
         try {
             

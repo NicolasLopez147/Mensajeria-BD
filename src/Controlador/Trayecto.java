@@ -7,48 +7,65 @@ package Controlador;
 
 /**
  *
- * @author Juan
+ * @author Antonio
  */
 public class Trayecto {
-    private int identificadorDeServicio;
-    private int identificadorDeRuta;
+    private int idServicio;
+    private int idRuta;
     private String descripcion;
     private String calle;
-    private int numeroDeCalle;
-    String barrio;
-
-    public Trayecto(int identificadorDeServicio, int identificadorDeRuta, String descripcion, String calle, int numeroDeCalle, String barrio) {
-        this.identificadorDeServicio = identificadorDeServicio;
-        this.identificadorDeRuta = identificadorDeRuta;
-        this.descripcion = descripcion;
-        this.calle = calle;
-        this.numeroDeCalle = numeroDeCalle;
-        this.barrio = barrio;
+    private int numero;
+    private String barrio;
+    
+    public Trayecto(){
     }
 
-    public int getIdentificadorDeServicio() {
-        return identificadorDeServicio;
+    public int getIdServicio() {
+        return idServicio;
     }
 
-    public int getIdentificadorDeRuta() {
-        return identificadorDeRuta;
+    public void setIdServicio(int idServicio) {
+        this.idServicio = idServicio;
+    }
+
+    public int getIdRuta() {
+        return idRuta;
+    }
+
+    public void setIdRuta(int idRuta) {
+        this.idRuta = idRuta;
     }
 
     public String getDescripcion() {
         return descripcion;
     }
 
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     public String getCalle() {
         return calle;
     }
 
-
-    public int getNumeroDeCalle() {
-        return numeroDeCalle;
+    public void setCalle(String calle) {
+        this.calle = calle;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 
     public String getBarrio() {
         return barrio;
-    }   
+    }
+
+    public void setBarrio(String barrio) {
+        this.barrio = barrio;
+    }
+    
 }

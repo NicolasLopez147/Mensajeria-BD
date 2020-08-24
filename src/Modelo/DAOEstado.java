@@ -16,18 +16,24 @@ import javax.swing.JOptionPane;
  * @author Juan
  */
 public class DAOEstado {
-
+    private Estado estado;
+    
+    public DAOEstado(){
+        estado = new Estado();
+    }
     public void InsertarEstado() {
-        Estado estado = new Estado(0,"1922232", "CC");//Instancia de nueva estado
+
         String sql = "INSERT into estado VALUES (?, ?, ?, ?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
          */
+        Conexion a = new Conexion();
         try {
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setInt(1, estado.getIdentificadorDeServicio());
-            ps.setString(2, estado.getEstadoDeServicio());
-            ps.setString(3, estado.getDescripcion());
+            ps.setInt(1, estado.getIdServicio());
+            ps.setString(2, estado.getEstadoServicio());
+            ps.setString(3, estado.getFechaCambio());
+            ps.setString(4, estado.getDescripcion());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {
@@ -36,4 +42,13 @@ public class DAOEstado {
             System.out.println("ok");
         }
     }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+    
 }

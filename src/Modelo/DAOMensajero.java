@@ -15,27 +15,41 @@ import javax.swing.JOptionPane;
  * @author Juan
  */
 public class DAOMensajero {
+    private Mensajero mensajero;
+    
+    public DAOMensajero(){
+        mensajero = new Mensajero();
+    }
 
     public void InsertarMensajero() throws SQLException {
-        Mensajero mensajero = new Mensajero("C.C", 0, 2.5, "M", "Veneco", "25082000", "No", "Paquete", 25584.25, "Moto", "No");//Instancia de nuevo mensajero
+//        Mensajero mensajero = new Mensajero("C.C", 0, 2.5, "M", "Veneco", "25082000", "No", "Paquete", 25584.25, "Moto", "No");//Instancia de nuevo mensajero
         //toca recibir los valores de instancia desde los forms
-        String sql = "INSERT into mensajero VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        String sql = "INSERT into mensajero VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?,?);";
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
+        
          */
+     //   Mensajero mensajero = new Mensajero();
+        
+        Conexion a = new Conexion();
+        Date fecha = new Date(00, 0, 0);
         try {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, mensajero.getTipoDeDocumento());
             ps.setInt(2, mensajero.getNumeroDeDocumento());
-            ps.setDouble(3, mensajero.getCalificacionPromedio());
-            ps.setString(4, mensajero.getSexo());
-            ps.setString(5, mensajero.getNacionalidad());
-            ps.setString(6, mensajero.getFechaDeNacimiento());//Toca convertir el String a date
-            ps.setString(7, mensajero.getSeguridadSocial());
-            ps.setString(8, mensajero.getMedioDeTransporte());
-            ps.setDouble(9, mensajero.getPagoAcumulado());
-            ps.setString(10, mensajero.getTipoDeTransporte());
-            ps.setString(11, mensajero.getEstado());
+            ps.setString(3, mensajero.getPrimNombre());
+            ps.setString(4, mensajero.getSegNombre());
+            ps.setString(5, mensajero.getPrimApellido());
+            ps.setString(6, mensajero.getSegApellido());
+            ps.setDouble(7, mensajero.getCalificacionPromedio());
+            ps.setString(8, mensajero.getSexo());
+            ps.setString(9, mensajero.getNacionalidad());
+            ps.setDate(10, fecha);//Toca convertir el String a date
+            ps.setString(11, mensajero.getSeguridadSocial());
+            ps.setString(12, mensajero.getMedioDeTransporte());
+            ps.setDouble(13, mensajero.getPagoAcumulado());
+            ps.setString(14, mensajero.getTipoDeTransporte());
+            ps.setString(15, mensajero.getEstado());
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {
@@ -43,5 +57,12 @@ public class DAOMensajero {
         } finally {
             System.out.println("ok");
         }
+    }
+        public Mensajero getMensajero() {
+        return mensajero;
+    }
+
+    public void setMensajero(Mensajero mensajero) {
+        this.mensajero = mensajero;
     }
 }

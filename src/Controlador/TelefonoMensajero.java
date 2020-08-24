@@ -9,22 +9,20 @@ package Controlador;
  *
  * @author Antonio
  */
-public class Jornada {
-    String dia;
-    String tipoDocumento;
-    int numeroDocumento;
-    String horaInicial;
-    String horaFinal;
+public class TelefonoMensajero {
+    private int telefonoMensajero;
+    private String tipoDocumento;
+    private int numeroDocumento;
     
-    public Jornada(){
+    public TelefonoMensajero(){
     }
 
-    public String getDia() {
-        return dia;
+    public int getTelefonoMensajero() {
+        return telefonoMensajero;
     }
 
-    public void setDia(String dia) {
-        this.dia = dia;
+    public void setTelefonoMensajero(int telefonoMensajero) {
+        this.telefonoMensajero = telefonoMensajero;
     }
 
     public String getTipoDocumento() {
@@ -42,21 +40,6 @@ public class Jornada {
     public void setNumeroDocumento(int numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
-
-    public String getHoraInicial() {
-        return horaInicial;
-    }
-
-    public void setHoraInicial(String horaInicial) {
-        this.horaInicial = horaInicial;
-    }
-
-    public String getHoraFinal() {
-        return horaFinal;
-    }
-
-    public void setHoraFinal(String horaFinal) {
-        this.horaFinal = horaFinal;
-    }
+    
     
 }

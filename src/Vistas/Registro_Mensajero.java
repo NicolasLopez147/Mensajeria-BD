@@ -5,12 +5,18 @@
  */
 package Vistas;
 
+import Controlador.Controlador;
+import Controlador.Mensajero;
+
 /**
  *
  * @author Sebastián
  */
 public class Registro_Mensajero extends javax.swing.JFrame {
-
+    
+    private Controlador controlador = new Controlador();
+    private Mensajero mensajero;
+    
     /**
      * Creates new form Registro_Mensajero
      */
@@ -580,7 +586,48 @@ public class Registro_Mensajero extends javax.swing.JFrame {
 
     private void Regis_msjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regis_msjActionPerformed
         
-         Aviso_registro_msj.setVisible(true);
+        try{
+            mensajero = controlador.getMensajero();
+            mensajero.setPrimNombre(Pri_nom_msj.getText());
+            mensajero.setSegNombre(Seg_nom_msj.getText());
+            mensajero.setPrimApellido(Pri_ape_msj.getText());
+            mensajero.setSegApellido(Seg_ape_msj.getText());
+            mensajero.setNumeroDeDocumento(Integer.valueOf(Num_doc_msj.getText()));
+            mensajero.setFechaDeNacimiento(Fecha_nac_msj.getText());
+            mensajero.setNacionalidad(Nac_msj.getText());
+            String tipo_documento = Tipo_doc_msj.getSelectedItem().toString();
+            if (tipo_documento == "Cédula de ciudadanía"){
+                tipo_documento = "C.C";
+            } else if(tipo_documento == "Cédula de extranjería"){
+                tipo_documento = "C.E";
+            } else if(tipo_documento == "Tarjeta de identidad"){
+                tipo_documento = "T.I";
+            }
+            mensajero.setTipoDeDocumento(tipo_documento);
+            String segSocial = Segu_soc_msj.getSelectedItem().toString();
+            
+            if (segSocial == "Sí"){
+                segSocial = "SI";
+            } else if(segSocial == "No"){
+                segSocial = "NO";
+            }
+            mensajero.setSeguridadSocial(segSocial);
+            mensajero.setMedioDeTransporte(Tipo_veh_msj.getSelectedItem().toString());
+            
+            mensajero.setCalificacionPromedio(4);
+            mensajero.setSexo("F");
+            mensajero.setPagoAcumulado(1);
+            mensajero.setTipoDeTransporte("9");
+            mensajero.setEstado("SI");
+            
+            controlador.InsertarMensajero();
+             Aviso_registro_msj.setVisible(true);
+            
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
+        
 
         //Poner en blanco todos los JTextField y los JCheckBox
         Pri_nom_msj.setText("");

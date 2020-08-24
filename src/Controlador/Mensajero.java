@@ -24,20 +24,45 @@ public class Mensajero {
     double pagoAcumulado;
     String tipoDeTransporte;
     String estado;
+    String primNombre;
+    String segNombre;
+    String primApellido;
+    String segApellido;
 
     //Constructor de mensajero
-    public Mensajero(String tipoDeDocumento, int numeroDeDocumento, double calificacionPromedio, String sexo, String nacionalidad, String fechaDeNacimiento, String seguridadSocial, String medioDeTransporte, double pagoAcumulado, String tipoDeTransporte, String estado) {
-        this.tipoDeDocumento = tipoDeDocumento;
-        this.numeroDeDocumento = numeroDeDocumento;
-        this.calificacionPromedio = calificacionPromedio;
-        this.sexo = sexo;
-        this.nacionalidad = nacionalidad;
-        this.fechaDeNacimiento = fechaDeNacimiento;
-        this.seguridadSocial = seguridadSocial;
-        this.medioDeTransporte = medioDeTransporte;
-        this.pagoAcumulado = pagoAcumulado;
-        this.tipoDeTransporte = tipoDeTransporte;
-        this.estado = estado;
+    public Mensajero() {
+    }
+
+    public String getPrimNombre() {
+        return primNombre;
+    }
+
+    public void setPrimNombre(String primNombre) {
+        this.primNombre = primNombre;
+    }
+
+    public String getSegNombre() {
+        return segNombre;
+    }
+
+    public void setSegNombre(String segNombre) {
+        this.segNombre = segNombre;
+    }
+
+    public String getPrimApellido() {
+        return primApellido;
+    }
+
+    public void setPrimApellido(String primApellido) {
+        this.primApellido = primApellido;
+    }
+
+    public String getSegApellido() {
+        return segApellido;
+    }
+
+    public void setSegApellido(String segApellido) {
+        this.segApellido = segApellido;
     }
 
     public String getTipoDeDocumento() {

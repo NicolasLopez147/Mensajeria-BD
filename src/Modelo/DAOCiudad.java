@@ -14,16 +14,19 @@ import javax.swing.JOptionPane;
  * @author Juan
  */
 public class DAOCiudad {
+    private Ciudad ciudad;
+    public DAOCiudad(){
+        ciudad = new Ciudad();
+    }
     public void InsertarCiudad(){
-     String sql = "INSERT into ciudad VALUES (?, ?, ?);";
-     Ciudad ciudad = new Ciudad(1234, "Bogota", 232.34);
+        String sql = "INSERT into ciudad VALUES (?, ?, ?);";
+        Conexion a = new Conexion();
+        
      try {
-            
             PreparedStatement ps = con.prepareStatement(sql);
-            
             ps.setInt(1, ciudad.getCodigoPostal());
             ps.setString(2, ciudad.getNombre());
-            ps.setDouble(3, ciudad.getCostoPorTrayecto());            
+            ps.setDouble(3, ciudad.getCostoTrayecto());            
             ps.executeUpdate();
             ps.close();
         } catch (SQLException ex) {
@@ -33,4 +36,13 @@ public class DAOCiudad {
         }
     
     }
+
+    public Ciudad getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
+    }
+    
 }

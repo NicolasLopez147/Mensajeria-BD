@@ -13,12 +13,69 @@ public class Servicio {
     int idServicio;
     int cantidadDeTrayectos;
     String tipoDeTransporte;
+    String tipoIdaVuelta;
     String fechaDeInicio;
     String horaDeInicio;
     int comision;
     int costoTotal;
     int calificacion;
+    int codigoPostal;
+    String tipoDocumentoMensajero;
+    int numeroDocumentoMensajero;
+    String tipoDocumentoCliente;
+    int numeroDocumentoCliente;
+    
+    public Servicio(){
+    }
 
+    public String getTipoIdaVuelta() {
+        return tipoIdaVuelta;
+    }
+
+    public void setTipoIdaVuelta(String tipoIdaVuelta) {
+        this.tipoIdaVuelta = tipoIdaVuelta;
+    }
+
+    public int getCodigoPostal() {
+        return codigoPostal;
+    }
+
+    public void setCodigoPostal(int codigoPostal) {
+        this.codigoPostal = codigoPostal;
+    }
+
+    public String getTipoDocumentoMensajero() {
+        return tipoDocumentoMensajero;
+    }
+
+    public void setTipoDocumentoMensajero(String tipoDocumentoMensajero) {
+        this.tipoDocumentoMensajero = tipoDocumentoMensajero;
+    }
+
+    public int getNumeroDocumentoMensajero() {
+        return numeroDocumentoMensajero;
+    }
+
+    public void setNumeroDocumentoMensajero(int numeroDocumentoMensajero) {
+        this.numeroDocumentoMensajero = numeroDocumentoMensajero;
+    }
+
+    public String getTipoDocumentoCliente() {
+        return tipoDocumentoCliente;
+    }
+
+    public void setTipoDocumentoCliente(String tipoDocumentoCliente) {
+        this.tipoDocumentoCliente = tipoDocumentoCliente;
+    }
+
+    public int getNumeroDocumentoCliente() {
+        return numeroDocumentoCliente;
+    }
+
+    public void setNumeroDocumentoCliente(int numeroDocumentoCliente) {
+        this.numeroDocumentoCliente = numeroDocumentoCliente;
+    }
+    
     public int getIdServicio() {
         return idServicio;
     }

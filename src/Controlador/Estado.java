@@ -7,33 +7,41 @@ package Controlador;
 
 /**
  *
- * @author Juan
+ * @author Antonio
  */
 public class Estado {
-    int identificadorDeServicio;
-    String estadoDeServicio;
-    String descripcion;
-
-    public Estado(int identificadorDeServicio, String estadoDeServicio, String descripcion) {
-        this.identificadorDeServicio = identificadorDeServicio;
-        this.estadoDeServicio = estadoDeServicio;
-        this.descripcion = descripcion;
+    private int idServicio;
+    private String estadoServicio;
+    private String fechaCambio;
+    private String descripcion;
+    
+    public Estado(){
     }
 
-    public int getIdentificadorDeServicio() {
-        return identificadorDeServicio;
+    public int getIdServicio() {
+        return idServicio;
     }
 
-    public void setIdentificadorDeServicio(int identificadorDeServicio) {
-        this.identificadorDeServicio = identificadorDeServicio;
+    public void setIdServicio(int idServicio) {
+        this.idServicio = idServicio;
     }
 
-    public String getEstadoDeServicio() {
-        return estadoDeServicio;
+    
+
+    public String getEstadoServicio() {
+        return estadoServicio;
     }
 
-    public void setEstadoDeServicio(String estadoDeServicio) {
-        this.estadoDeServicio = estadoDeServicio;
+    public void setEstadoServicio(String estadoServicio) {
+        this.estadoServicio = estadoServicio;
+    }
+
+    public String getFechaCambio() {
+        return fechaCambio;
+    }
+
+    public void setFechaCambio(String fechaCambio) {
+        this.fechaCambio = fechaCambio;
     }
 
     public String getDescripcion() {
