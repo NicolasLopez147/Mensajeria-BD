@@ -290,7 +290,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;Para crear un servicio, llene los siguientes datos. La fecha y la hora son opcionales, recuerde el formato de la hora es el de 24h y el de la fecha DD/MM/YYYY, p. ej. 18:15 y 24/08/2020."/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;Para crear un servicio, llene los siguientes datos.&#xa;&lt;br&gt;Recuerde el formato de la hora es el de 24h y el de la fecha DD/MM/YYYY, p. ej. 18:15 y 24/08/2020."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
