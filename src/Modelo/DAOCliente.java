@@ -39,7 +39,7 @@ public class DAOCliente {
         /*Script de inserción SQL, los signos de interrogación corresponden a
         los valores de cada columna
          */
-        Conexion a = new Conexion();
+        //Conexion a = new Conexion();
         
         try {
             
