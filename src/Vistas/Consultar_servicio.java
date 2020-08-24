@@ -251,7 +251,7 @@ public class Consultar_servicio extends javax.swing.JFrame {
 
         jLabel5.setText("Tipo documento:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de ciudadanía", "Cédula de extranjería" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de ciudadanía", "Cédula de extranjería", "Tarjeta de identidad" }));
 
         jLabel6.setText("Número documento:");
 

@@ -1,9 +1,5 @@
 package Vistas;
 
-import Controlador.Cliente;
-import Controlador.Controlador;
-import Controlador.TelefonoCliente;
-import Modelo.DAOCliente;
 import javax.swing.JOptionPane;
 
 /**
@@ -11,10 +7,7 @@ import javax.swing.JOptionPane;
  * @author Sebastián
  */
 public class Registro_Cliente extends javax.swing.JFrame {
-    private Cliente cliente;
-    private TelefonoCliente telcliente = new TelefonoCliente();
-    private DAOCliente consultas;
-    private Controlador controlador = new Controlador();
+
 
     public Registro_Cliente() {
         initComponents();
@@ -47,6 +40,7 @@ public class Registro_Cliente extends javax.swing.JFrame {
         Seg_nom_cli = new javax.swing.JTextField();
         Num_doc_cli = new javax.swing.JTextField();
         Conti_panel_cli = new javax.swing.JButton();
+        Salir_panel_cli = new javax.swing.JButton();
         Contacto_cliente = new javax.swing.JPanel();
         Tipo_dir_cli = new javax.swing.JComboBox<>();
         Num1_dir_cli = new javax.swing.JTextField();
@@ -62,6 +56,7 @@ public class Registro_Cliente extends javax.swing.JFrame {
         Barrio_cli = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         Ciu_cli = new javax.swing.JTextField();
+        Atras_panel1 = new javax.swing.JButton();
 
         Aviso_registro_cli.setTitle("En desarrollo");
         Aviso_registro_cli.setMinimumSize(new java.awt.Dimension(400, 105));
@@ -112,9 +107,7 @@ public class Registro_Cliente extends javax.swing.JFrame {
 
         jLabel1.setText("Primer nombre:");
 
-        Tipo_doc_cli.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de ciudadanía", "Cédula de extranjería" }));
-
-        Pri_nom_cli.setText("Pepito");
+        Tipo_doc_cli.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cédula de ciudadanía", "Cédula de extranjería", "Tarjeta de identidad" }));
 
         jLabel6.setText("Número documento:");
 
@@ -127,43 +120,51 @@ public class Registro_Cliente extends javax.swing.JFrame {
             }
         });
 
+        Salir_panel_cli.setText("Salir");
+        Salir_panel_cli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Salir_panel_cliActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout Basicos_clienteLayout = new javax.swing.GroupLayout(Basicos_cliente);
         Basicos_cliente.setLayout(Basicos_clienteLayout);
         Basicos_clienteLayout.setHorizontalGroup(
             Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Basicos_clienteLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(Basicos_clienteLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Salir_panel_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Conti_panel_cli))
-                    .addGroup(Basicos_clienteLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Basicos_clienteLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(Num_doc_cli))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Basicos_clienteLayout.createSequentialGroup()
+                        .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(Basicos_clienteLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(Num_doc_cli))
-                            .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(Basicos_clienteLayout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(Pri_ape_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(Basicos_clienteLayout.createSequentialGroup()
-                                    .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel1)
-                                        .addComponent(jLabel2))
-                                    .addGap(32, 32, 32)
-                                    .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(Pri_nom_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Seg_nom_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Basicos_clienteLayout.createSequentialGroup()
-                                    .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(jLabel5))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(Seg_ape_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(Tipo_doc_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Pri_ape_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(Basicos_clienteLayout.createSequentialGroup()
+                                .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2))
+                                .addGap(32, 32, 32)
+                                .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Pri_nom_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Seg_nom_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Basicos_clienteLayout.createSequentialGroup()
+                                .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Seg_ape_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Tipo_doc_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(59, 59, 59))
         );
         Basicos_clienteLayout.setVerticalGroup(
@@ -194,8 +195,10 @@ public class Registro_Cliente extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(Num_doc_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Conti_panel_cli)
-                .addContainerGap())
+                .addGroup(Basicos_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Conti_panel_cli)
+                    .addComponent(Salir_panel_cli))
+                .addGap(14, 14, 14))
         );
 
         Panel_cliente.addTab("Basicos", Basicos_cliente);
@@ -208,7 +211,8 @@ public class Registro_Cliente extends javax.swing.JFrame {
 
         Tel_cli.setColumns(20);
         Tel_cli.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        Tel_cli.setRows(5);
+        Tel_cli.setLineWrap(true);
+        Tel_cli.setRows(3);
         jScrollPane1.setViewportView(Tel_cli);
 
         jLabel9.setText("Correo electronico:");
@@ -224,49 +228,60 @@ public class Registro_Cliente extends javax.swing.JFrame {
 
         jLabel12.setText("Ciudad:");
 
+        Atras_panel1.setText("Atras");
+        Atras_panel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Atras_panel1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout Contacto_clienteLayout = new javax.swing.GroupLayout(Contacto_cliente);
         Contacto_cliente.setLayout(Contacto_clienteLayout);
         Contacto_clienteLayout.setHorizontalGroup(
             Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Regis_cli)
-                .addGap(54, 54, 54))
             .addGroup(Contacto_clienteLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(Contacto_clienteLayout.createSequentialGroup()
-                        .addComponent(Tipo_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(Num1_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Num2_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Contacto_clienteLayout.createSequentialGroup()
-                        .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(Contacto_clienteLayout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(14, 14, 14))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Contacto_clienteLayout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Cor_cli)
-                            .addComponent(jScrollPane1)))
+                .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Contacto_clienteLayout.createSequentialGroup()
                         .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addGap(74, 74, 74))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(69, 69, 69)))
-                        .addGap(4, 4, 4)
+                            .addComponent(jLabel8)
+                            .addGroup(Contacto_clienteLayout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(18, 18, 18)
+                                .addComponent(Cor_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Ciu_cli, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                            .addComponent(Barrio_cli))))
-                .addGap(80, 80, 80))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
+                                .addComponent(Atras_panel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Regis_cli)
+                                .addGap(54, 54, 54))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
+                                .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(Contacto_clienteLayout.createSequentialGroup()
+                                        .addComponent(Tipo_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(47, 47, 47)
+                                        .addComponent(Num1_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Num2_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(Contacto_clienteLayout.createSequentialGroup()
+                                        .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
+                                                .addComponent(jLabel11)
+                                                .addGap(74, 74, 74))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
+                                                .addComponent(jLabel12)
+                                                .addGap(69, 69, 69)))
+                                        .addGap(4, 4, 4)
+                                        .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(Ciu_cli, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(Barrio_cli, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addGap(80, 80, 80))))))
         );
         Contacto_clienteLayout.setVerticalGroup(
             Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -277,11 +292,10 @@ public class Registro_Cliente extends javax.swing.JFrame {
                         .addComponent(Tipo_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Num1_dir_cli, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(Num2_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7)))))
+                        .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Num2_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7)
+                            .addComponent(Num1_dir_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -290,20 +304,21 @@ public class Registro_Cliente extends javax.swing.JFrame {
                 .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(Ciu_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Contacto_clienteLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Contacto_clienteLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel8)
-                        .addGap(41, 41, 41)))
+                        .addGap(32, 32, 32)))
                 .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(Cor_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(Regis_cli)
+                    .addComponent(Cor_cli, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(Contacto_clienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Regis_cli)
+                    .addComponent(Atras_panel1))
                 .addGap(14, 14, 14))
         );
 
@@ -325,41 +340,7 @@ public class Registro_Cliente extends javax.swing.JFrame {
 
     private void Regis_cliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Regis_cliActionPerformed
         
-        try{
-            cliente = controlador.getCliente();
-            cliente.setPrimerNombre(Pri_nom_cli.getText());
-            cliente.setSegundoNombre(Seg_nom_cli.getText());
-            cliente.setPrimerApellido(Pri_ape_cli.getText());
-            cliente.setSegundoApellido(Seg_ape_cli.getText());
-            String tipo_documento = Tipo_doc_cli.getSelectedItem().toString();
-            if (tipo_documento == "Cédula de ciudadanía"){
-                tipo_documento = "C.C";
-            } else if(tipo_documento == "Cédula de extranjería"){
-                tipo_documento = "C.E";
-            } else if(tipo_documento == "Tarjeta de identidad"){
-                tipo_documento = "T.I";
-            }
-            cliente.setTipoDeDocumento(tipo_documento);
-            cliente.setNumeroDeDocumento(Integer.valueOf(Num_doc_cli.getText()));
-            String calle = Tipo_dir_cli.getSelectedItem().toString();
-            calle = calle+" "+Num1_dir_cli.getText();
-            cliente.setCalle(calle);
-            cliente.setNumeroDeCalle(Integer.valueOf(Num2_dir_cli.getText()));
-            cliente.setBarrio(Barrio_cli.getText());
-            cliente.setCiudad(Ciu_cli.getText());
-            
-            
-            controlador.InsertarCliente();
-            
-        }catch(Exception e){
-            System.out.println(e);
-        }
         
-        
-    /*    
-        Tel_cli.getText();
-        Cor_cli.getText();
-        */
         //Si el registro es exitoso, poner esto :3
         Aviso_registro_cli.setVisible(true);
         //Dejar en blanco todos los JTextField
@@ -388,10 +369,22 @@ public class Registro_Cliente extends javax.swing.JFrame {
 
     private void Conti_panel_cliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Conti_panel_cliActionPerformed
         
-        
         Panel_cliente.setSelectedIndex(1);
         
     }//GEN-LAST:event_Conti_panel_cliActionPerformed
+
+    private void Atras_panel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Atras_panel1ActionPerformed
+        
+        Panel_cliente.setSelectedIndex(0);
+        
+    }//GEN-LAST:event_Atras_panel1ActionPerformed
+
+    private void Salir_panel_cliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Salir_panel_cliActionPerformed
+        
+        this.setVisible(false);
+        new Inicio().setVisible(true);
+        
+    }//GEN-LAST:event_Salir_panel_cliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -429,6 +422,7 @@ public class Registro_Cliente extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Atras_panel1;
     private javax.swing.JDialog Aviso_registro_cli;
     private javax.swing.JTextField Barrio_cli;
     private javax.swing.JPanel Basicos_cliente;
@@ -444,6 +438,7 @@ public class Registro_Cliente extends javax.swing.JFrame {
     private javax.swing.JTextField Pri_ape_cli;
     private javax.swing.JTextField Pri_nom_cli;
     private javax.swing.JButton Regis_cli;
+    private javax.swing.JButton Salir_panel_cli;
     private javax.swing.JTextField Seg_ape_cli;
     private javax.swing.JTextField Seg_nom_cli;
     private javax.swing.JTextArea Tel_cli;

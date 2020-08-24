@@ -19,6 +19,8 @@ public class Inicio extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         Ventana_cliente.setSize(365, 250);
         Ventana_cliente.setLocationRelativeTo(null);
+        Ventana_mensajero.setSize(365, 250);
+        Ventana_mensajero.setLocationRelativeTo(null);
         
     }
     
@@ -161,9 +163,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(Ventana_mensajeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Mensajero_nuevo)
                     .addComponent(Mensajero_existente))
-                .addGap(32, 32, 32)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Volver_msj_inicio)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -251,6 +253,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void Cliente_existenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cliente_existenteActionPerformed
         
+        Ventana_cliente.setVisible(false);
         new Menu_Cliente().setVisible(true);
         
     }//GEN-LAST:event_Cliente_existenteActionPerformed
@@ -264,7 +267,8 @@ public class Inicio extends javax.swing.JFrame {
 
     private void Mensajero_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mensajero_nuevoActionPerformed
         
-        
+        Ventana_mensajero.setVisible(false);
+        new Registro_Mensajero().setVisible(true);
         
     }//GEN-LAST:event_Mensajero_nuevoActionPerformed
 
@@ -279,13 +283,17 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_Volver_msj_inicioActionPerformed
 
     private void AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdminActionPerformed
-       
+        
+        this.setVisible(false);
+        new Administrador().setVisible(true);
+        
     }//GEN-LAST:event_AdminActionPerformed
 
     private void MensajeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MensajeroActionPerformed
-        // TODO add your handling code here:
+        
         this.setVisible(false);
-        new Registro_Mensajero().setVisible(true);
+        Ventana_mensajero.setVisible(true);
+        
     }//GEN-LAST:event_MensajeroActionPerformed
 
     /**
